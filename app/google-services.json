@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "782277907727",
+    "firebase_url": "https://kalkulatorwarisan.firebaseio.com",
+    "project_id": "kalkulatorwarisan",
+    "storage_bucket": "kalkulatorwarisan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782277907727:android:9356b69ef6ce28af",
+        "android_client_info": {
+          "package_name": "com.example.kalkulatorwarisan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782277907727-7mpmra90l6er0b8qbdll3aqk8clofrpo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kalkulatorwarisan",
+            "certificate_hash": "52019e0f8cec9db708895dc419e6213a819548d8"
+          }
+        },
+        {
+          "client_id": "782277907727-aa6lna0osq1do6oc47hoan6cocs9s0qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgy26FDTc6F0oRiBVTbAu8IN94cOPoSIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782277907727-aa6lna0osq1do6oc47hoan6cocs9s0qr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

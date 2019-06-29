@@ -8,10 +8,13 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
+    lateinit var ref : DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +64,10 @@ class RegisterActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         Log.d("REGISTER", "Successfully registered ")
                         val user = auth.currentUser
+                        ref = FirebaseDatabase.getInstance().getReference("User")
+                        ref.child("${taskId}/username").setValue(nama)
+                        ref.child("${taskId}/email").setValue(email)
+                        ref.child("${taskId}/image").setValue("")
                         updateUI(user)
                     }
 

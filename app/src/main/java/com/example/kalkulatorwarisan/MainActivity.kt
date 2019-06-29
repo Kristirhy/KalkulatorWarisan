@@ -14,12 +14,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize Firebase Auth
-        auth = FirebaseAuth.getInstance()
-
-        signout.setOnClickListener{
-            auth.signOut()
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
     }
 }

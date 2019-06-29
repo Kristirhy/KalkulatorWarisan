@@ -23,6 +23,7 @@ import com.google.android.gms.common.api.GoogleApiClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.database.DatabaseReference
 
 
 class LoginActivity : AppCompatActivity(),
@@ -34,6 +35,7 @@ class LoginActivity : AppCompatActivity(),
     private val RC_SIGN_IN = 9001
     private var mSignInButton: SignInButton? = null
     private var mGoogleApiClient: GoogleApiClient? = null
+    lateinit var ref : DatabaseReference
     //firebase instance variables
     private var mFirebaseAuth: FirebaseAuth? = null
 
@@ -172,7 +174,7 @@ class LoginActivity : AppCompatActivity(),
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
             Toast.makeText(this, "Hello ${currentUser.email}", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, ProfileActivity::class.java))
             finish()
         }
 
